@@ -1,0 +1,29 @@
+[package]
+name = "demo_egui_v29"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = { version = "0.29.1", default-features = false, features = [
+    "__screenshot",
+    "wgpu",
+    "x11",
+    "wayland",
+] }
+
+egui-wgpu = { version = "0.29.1", features = ["winit"] }
+wgpu = "22.1"
+futures-lite = "2.3"
+tokio = { version = "1.40", features = [
+    "sync",
+    "rt-multi-thread",
+    "process",
+    "signal",
+    "time",
+    "io-util",
+    "fs",
+    "macros",
+    "net",
+] }
+bytes = "1"
+crossbeam-channel = "0.5.13"
